@@ -1,0 +1,82 @@
+
+.main-nav {
+    padding: 1rem 0;
+    
+    &__list {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: flex-start;
+        &--child {
+            flex-direction: column;
+            align-items: flex-start;
+            position: absolute;
+            top: 120%;
+            left: 50%;
+            transition: .2s all ease;
+            visibility: hidden;
+            opacity: 0;
+            box-shadow: 0 0 2.5rem rgba($colorGreyDark3, .2);
+            min-width: 20rem;
+            transform: translateX(-50%);
+            border-radius: .5rem;
+            padding: .5rem 0;
+            background-color: $colorWhite;
+            &::before {
+                content: '';
+                display: block;
+                width: 0; 
+                height: 0; 
+                border-left: 1rem solid transparent;
+                border-right: 1rem solid transparent;            
+                border-bottom: 1rem solid $colorWhite;
+                position: absolute;
+                bottom: 100%;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+    } 
+
+    &__item {
+        position: relative;
+        &--active {
+            .main-nav__link {
+                color: $colorFirst;
+            }
+        }
+        &--child {
+            width: 100%;
+        }
+    }
+    &__item:hover &__list--child {
+        top: 100%;
+        visibility: visible;
+        opacity: 1;
+    }
+
+    &__link {
+        display: block;
+        color: $colorFourth;
+        font-weight: 600;
+        letter-spacing: .1rem;
+        transition: .3s all ease;
+        &:not(.main-nav__link--child) {
+            padding: 1.25rem 1rem; 
+        }
+
+        &:hover {
+            color: $colorFirst;
+        }
+
+        &--child {
+            white-space: nowrap;
+            padding: .25rem 1.5rem;
+
+            &:hover {
+                padding-left: 2rem;
+            }
+        }
+    }
+}

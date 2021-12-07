@@ -1,0 +1,14 @@
+{
+  "name": "light-travel",
+  "version": "1.0.0",
+  "description": "Light Travel - HTML Template for travel agencies",
+  "main": "index.js",
+  "scripts": {
+    "compile": "node-sass sass/main.scss css/style.css -w"
+  },
+  "author": "IM Design",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^6.0.1"
+  }
+}

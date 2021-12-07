@@ -1,0 +1,16 @@
+
+.main-header {
+    padding: 15rem 0;
+    background-image: linear-gradient(
+        to right bottom,
+        rgba($colorFourth, 0.8),
+        rgba($colorFourth, 0.8)),
+    url(../img/travel-landscape-01.jpg);
+    background-size: cover;
+    background-position: top center;
+
+    &__content {
+        padding: 1rem 0;
+        max-width: 68rem;
+    }
+}

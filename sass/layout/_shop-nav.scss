@@ -1,0 +1,44 @@
+
+.shop-nav {
+    
+    &__list {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    &__item {
+        &:first-child {
+            margin-right: 2rem;
+        }
+    }
+
+    &__link {
+        font-size: 1.8rem;
+        color: $colorFourth;
+        position: relative;
+    }
+
+    &__counter {
+        display: block;
+        width: 1.8rem;
+        height: 1.8rem;
+        line-height: 1.8rem;
+        background-color: $colorFirst;
+        color: $colorWhite;
+        text-align: center;
+        position: absolute;
+        top: -1rem;
+        left: 1.3rem;
+        font-size: 1.125rem;
+        border-radius: 100%;
+    }
+
+    &__price {
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-left: .5rem;
+    }
+}

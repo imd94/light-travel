@@ -1,0 +1,15 @@
+
+.wrapper {
+    max-width: 132rem;
+    margin: 0 auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+
+    &--full {
+        max-width: 100%;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+}
+
+
