@@ -9,11 +9,35 @@ body {
 
 h1,h2,h3,h4,h5,h6 {
     font-family: 'Oswald', sans-serif;
-    line-height: 1.3em;
+    line-height: 1em;
 }
 
 a {
     text-decoration: none;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.graph {
+    font-size: 1.6rem;
+    color: $colorGreyDark1;
+
+    &--white {
+        color: $colorWhite;
+    }
+
+    &--medium {
+        font-size: 2rem;
+        line-height: 1.4;
+    }
+
+    &--large {
+        font-size: 2.4rem;
+    }
 }
 
 .heading-primary {
@@ -45,23 +69,5 @@ a {
     &__text {
         color: $colorFourth;
         font-weight: 500;
-    }
-}
-
-.paragraph {
-    font-weight: 500;
-    
-    &--medium {
-        font-size: 2rem;
-        line-height: 1.3;
-    }
-    &--large {
-        font-size: 2.4rem;
-    }
-    &--light {
-        color: $colorWhite;
-    }
-    &--dark {
-        color: $colorGreyDark3;
     }
 }

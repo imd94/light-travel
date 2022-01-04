@@ -27,10 +27,26 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Oswald', sans-serif;
-  line-height: 1.3em; }
+  line-height: 1em; }
 
 a {
   text-decoration: none; }
+
+img {
+  display: block;
+  width: 100%;
+  height: auto; }
+
+.graph {
+  font-size: 1.6rem;
+  color: #666; }
+  .graph--white {
+    color: #fff; }
+  .graph--medium {
+    font-size: 2rem;
+    line-height: 1.4; }
+  .graph--large {
+    font-size: 2.4rem; }
 
 .heading-primary {
   font-size: 8rem;
@@ -55,18 +71,6 @@ a {
     color: #20292f;
     font-weight: 500; }
 
-.paragraph {
-  font-weight: 500; }
-  .paragraph--medium {
-    font-size: 2rem;
-    line-height: 1.3; }
-  .paragraph--large {
-    font-size: 2.4rem; }
-  .paragraph--light {
-    color: #fff; }
-  .paragraph--dark {
-    color: #1a1a1a; }
-
 .display-none {
   display: none; }
 
@@ -75,95 +79,23 @@ a {
   margin: 0;
   padding: 0; }
 
-.u-padding-none {
-  padding: 0 !important; }
-
-.u-margin-none {
-  margin: 0 !important; }
-
-.u-margin-bottom-xs {
-  margin-bottom: 1.5rem; }
-
-.u-margin-top-xs {
-  margin-top: 1.5rem; }
-
-.u-margin-bottom-sm {
-  margin-top: 2rem; }
-
-.u-margin-top-sm {
-  margin-top: 2rem; }
-
 .wrapper {
-  max-width: 132rem;
-  margin: 0 auto;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem; }
-  .wrapper--full {
-    max-width: 100%;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem; }
-
-.layout-row {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-  margin-left: -1.5rem;
-  margin-right: -1.5rem; }
-
-.layout-column,
-.layout-column-2,
-.layout-column-3,
-.layout-column-4,
-.layout-column-5,
-.layout-column-6,
-.layout-column-7,
-.layout-column-8,
-.layout-column-9,
-.layout-column-10,
-.layout-column-11,
-.layout-column-12 {
-  padding-left: 1.5rem;
-  padding-right: 1.5rem; }
-
-.layout-column {
-  flex: 1 1 auto; }
-
-.layout-column-2 {
-  flex: 1 1 16.6%; }
-
-.layout-column-3 {
-  flex: 1 1 25%; }
-
-.layout-column-4 {
-  flex: 1 1 33.3%; }
-
-.layout-column-5 {
-  flex: 1 1 41.6%; }
-
-.layout-column-6 {
-  flex: 1 1 50%; }
-
-.layout-column-7 {
-  flex: 1 1 58.3%; }
-
-.layout-column-8 {
-  flex: 1 1 66.6%; }
-
-.layout-column-9 {
-  flex: 1 1 75%; }
-
-.layout-column-10 {
-  flex: 1 1 83.3%; }
-
-.layout-column-11 {
-  flex: 1 1 91.6%; }
-
-.layout-column-12 {
-  flex: 1 1 100%; }
+  display: grid;
+  grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+  grid-template-rows: min-content 70vh min-content; }
+  .wrapper--inner {
+    display: grid;
+    grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
 
 .main-nav {
+  grid-column: full-start / full-end;
   padding: 1rem 0; }
+  .main-nav__content {
+    grid-column: center-start / center-end;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; }
   .main-nav__list {
     display: flex;
     flex-direction: row;
@@ -224,13 +156,20 @@ a {
         padding-left: 2rem; }
 
 .main-header {
-  padding: 15rem 0;
+  grid-column: full-start / full-end;
   background-image: linear-gradient(to right bottom, rgba(32, 41, 47, 0.8), rgba(32, 41, 47, 0.8)), url(../img/travel-landscape-01.jpg);
   background-size: cover;
   background-position: top center; }
   .main-header__content {
-    padding: 1rem 0;
-    max-width: 68rem; }
+    grid-column: center-start / center-end;
+    padding: 3rem 0;
+    display: grid;
+    grid-row-gap: 2rem;
+    align-content: center;
+    justify-content: start;
+    justify-items: start; }
+  .main-header__desc {
+    max-width: 65rem; }
 
 .shop-nav__list {
   display: flex;
@@ -310,6 +249,7 @@ a {
   .btn--white {
     color: #fff; }
 
-.stacked-link {
-  display: block;
-  width: 100%; }
+.stacked-images {
+  grid-column: full-start / full-end;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); }

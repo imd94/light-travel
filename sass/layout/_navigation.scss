@@ -1,6 +1,16 @@
 
 .main-nav {
+    grid-column: full-start / full-end;
     padding: 1rem 0;
+
+    &__content {
+        grid-column: center-start / center-end;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
     
     &__list {
         display: flex;

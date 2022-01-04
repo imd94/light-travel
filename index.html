@@ -14,134 +14,107 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <!-- <link rel="shortcut icon" type="image/png" href="img/favicon.png"> -->
     
-    <title>Light Travel &mdash; Your Best Tour Agency</title>
+    <title>Light Travel &mdash; Your Best Tour Agency in the world</title>
 </head>
 
-<body>
+<body class="wrapper">
 
-    <nav class="main-nav">     
-        <div class="wrapper">
-            <div class="layout-row">
-                <span class="nav-toggler display-none">
-                    <i class="fas fa-bars"></i>
-                </span>    
+    <nav class="main-nav wrapper--inner">    
+        <div class="main-nav__content">
+            <span class="nav-toggler display-none">
+                <i class="fas fa-bars"></i>
+            </span>  
+            
+            <div class="light-logo">
+                <span class="light-logo__icon"><i class="fas fa-route"></i></span>
+                <span class="light-logo__text">Light Travel</span>
+            </div>
+            
+            <ul class="main-nav__list clear-list">
+                <li class="main-nav__item main-nav__item--active">
+                    <a class="main-nav__link" href="#">Home</a>
+                </li>
 
-                <div class="layout-column-3">
-                    <div class="light-logo">
-                        <span class="light-logo__icon"><i class="fas fa-route"></i></span>
-                        <span class="light-logo__text">Light Travel</span>
-                    </div>
-                </div>
-              
-                <div class="layout-column-7">
-                    <ul class="main-nav__list clear-list">
-                        <li class="main-nav__item main-nav__item--active">
-                            <a class="main-nav__link" href="#">Home</a>
+                <li class="main-nav__item">
+                    <a class="main-nav__link" href="#">Blog</a>
+                </li>
+
+                <li class="main-nav__item">
+                    <a class="main-nav__link" href="#">Shop</a>
+                </li>
+
+                <li class="main-nav__item">
+                    <a class="main-nav__link" href="#">Packages</a>
+                </li>
+
+                <li class="main-nav__item">
+                    <a class="main-nav__link" href="#">About</a>
+
+                    <ul class="main-nav__list main-nav__list--child clear-list">
+                        <li class="main-nav__item main-nav__item--child">
+                            <a class="main-nav__link main-nav__link--child" href="#">Team</a>
                         </li>
 
-                        <li class="main-nav__item">
-                            <a class="main-nav__link" href="#">Blog</a>
+                        <li class="main-nav__item main-nav__item--child">
+                            <a class="main-nav__link main-nav__link--child" href="#">Contact</a>
                         </li>
 
-                        <li class="main-nav__item">
-                            <a class="main-nav__link" href="#">Shop</a>
-                        </li>
+                    </ul>
+                </li>
 
-                        <li class="main-nav__item">
-                            <a class="main-nav__link" href="#">Packages</a>
-                        </li>
+                <li class="main-nav__item">
+                    <a class="main-nav__link" href="#">Landing Page</a>
+                </li>            
+            </ul> <!-- end main-nav__list -->        
+            
+            <div class="shop-nav">
+                <ul class="shop-nav__list clear-list">
+                    <li class="shop-nav__item">
+                        <a class="shop-nav__link" href="#">
+                            <span class="shop-nav__counter">5</span>
+                            <span class="shop-nav__icon"><i class="far fa-heart"></i></span>                                   
+                        </a>
+                    </li>
 
-                        <li class="main-nav__item">
-                            <a class="main-nav__link" href="#">About</a>
-
-                            <ul class="main-nav__list main-nav__list--child clear-list">
-                                <li class="main-nav__item main-nav__item--child">
-                                    <a class="main-nav__link main-nav__link--child" href="#">Team</a>
-                                </li>
-
-                                <li class="main-nav__item main-nav__item--child">
-                                    <a class="main-nav__link main-nav__link--child" href="#">Contact</a>
-                                </li>
-
-                            </ul>
-                        </li>
-
-                        <li class="main-nav__item">
-                            <a class="main-nav__link" href="#">Landing Page</a>
-                        </li>            
-                    </ul> <!-- end main-nav__list -->  
-                </div> 
-                
-                <div class="layout-column-2">
-                    <div class="shop-nav">
-                        <ul class="shop-nav__list clear-list">
-                            <li class="shop-nav__item">
-                                <a class="shop-nav__link" href="#">
-                                    <span class="shop-nav__counter">5</span>
-                                    <span class="shop-nav__icon"><i class="far fa-heart"></i></span>                                   
-                                </a>
-                            </li>
-
-                            <li class="shop-nav__item">
-                                <a class="shop-nav__link" href="#">
-                                    <span class="shop-nav__counter">8</span>
-                                    <span class="shop-nav__icon"><i class="fas fa-shopping-cart"></i></span>
-                                    <span class="shop-nav__price">$150.00</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div> <!-- end layout-row -->
-        </div> <!-- end wrapper -->
+                    <li class="shop-nav__item">
+                        <a class="shop-nav__link" href="#">
+                            <span class="shop-nav__counter">8</span>
+                            <span class="shop-nav__icon"><i class="fas fa-shopping-cart"></i></span>
+                            <span class="shop-nav__price">$150.00</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div> 
     </nav> <!-- end main-nav -->
 
 
-    <header class="main-header">
-        <div class="wrapper">
-            <div class="main-header__content">
-                <h1 class="heading-primary heading-primary--light main-header__h1 u-margin-bottom-xs">EXPLORE THE WORLD</h1>
-                <p class="main-header__desc paragraph--medium paragraph paragraph--light">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
-                <a href="#" class="main-header__btn btn btn--white u-margin-top-sm">Learn More</a>
-            </div>
-        </div>
+    <header class="main-header wrapper--inner">    
+        <div class="main-header__content">   
+            <h1 class="heading-primary heading-primary--light main-header__h1 u-margin-bottom-xs">EXPLORE THE WORLD</h1>
+            <p class="main-header__desc graph graph--white graph--medium">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
+            <a href="#" class="main-header__btn btn btn--white u-margin-top-sm">Learn More</a>    
+        </div> 
     </header> <!-- end main-header -->
     
-    <div id="content" class="content-area">
-        <main>
 
-            <section class="stacked-images">
-                <div class="wrapper--full">
-                    <div class="layout-row">
-                        <div class="layout-column-3 u-padding-none">
-                            <a class="stacked-link" data-gall="myGallery" href="img/travel-landscape-01.jpg">
-                                <img class="stacked-link__img" src="img/travel-landscape-05.jpg" alt="Image One">
-                            </a>
-                        </div>
+    <section class="stacked-images wrapper--inner"> 
+        <a class="stacked-link" data-gall="myGallery" href="img/travel-landscape-01.jpg">
+            <img class="stacked-link__img" src="img/travel-landscape-05.jpg" alt="Image One">
+        </a>
+    
+        <a class="stacked-link" data-gall="myGallery" href="img/travel-landscape-13.png">
+            <img class="stacked-link__img" src="img/travel-landscape-08.jpg" alt="Image One">
+        </a>
+    
+        <a class="stacked-link" data-gall="myGallery" href="img/travel-landscape-17.jpg">
+            <img class="stacked-link__img" src="img/travel-landscape-10.jpg" alt="Image One">
+        </a>     
 
-                        <div class="layout-column-3 u-padding-none">
-                            <a class="stacked-link" data-gall="myGallery" href="img/travel-landscape-13.png">
-                                <img class="stacked-link__img" src="img/travel-landscape-08.jpg" alt="Image One">
-                            </a>
-                        </div>
-
-                        <div class="layout-column-3 u-padding-none">
-                            <a class="stacked-link" data-gall="myGallery" href="img/travel-landscape-17.jpg">
-                                <img class="stacked-link__img" src="img/travel-landscape-10.jpg" alt="Image One">
-                            </a>
-                        </div>
-
-                        <div class="layout-column-3 u-padding-none">
-                            <a class="stacked-link" data-gall="myGallery" href="img/travel-landscape-18.jpg">
-                                <img class="stacked-link__img" src="img/travel-landscape-11.jpg" alt="Image One">
-                            </a>
-                        </div>
-                    </div>
-                </div>   
-            </section>
-
-        </main> <!-- end main -->
-    </div> <!-- end content-area -->
+        <a class="stacked-link" data-gall="myGallery" href="img/travel-landscape-18.jpg">
+            <img class="stacked-link__img" src="img/travel-landscape-11.jpg" alt="Image One">
+        </a>   
+    </section>
 
     <!-- Venobox JS -->
     <script src="js/venobox.min.js"></script>
