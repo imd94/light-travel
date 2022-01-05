@@ -1,0 +1,12 @@
+.social-media {
+    display: grid;
+    grid-template-columns: repeat(3, max-content);
+    grid-column-gap: 1.5rem;
+
+    &__link {
+        color: $colorGreyDark1;
+        font-size: 2.5rem;
+        display: block;
+        padding: .5rem;
+    }
+}

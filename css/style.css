@@ -42,22 +42,45 @@ img {
   color: #666; }
   .graph--white {
     color: #fff; }
+  .graph--dark {
+    color: #333;
+    font-weight: 500; }
   .graph--medium {
     font-size: 2rem;
     line-height: 1.4; }
   .graph--large {
-    font-size: 2.4rem; }
+    font-size: 2.4rem;
+    line-height: 1.4; }
+
+.pseudo-border {
+  position: relative;
+  padding-bottom: 4rem; }
+  .pseudo-border::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: block;
+    width: 17rem;
+    height: .3rem;
+    background-color: #ed4441; }
+  .pseudo-border--white::after {
+    background-color: #fff; }
 
 .heading-primary {
   font-size: 8rem;
   font-weight: 700;
-  color: #333; }
+  color: #333;
+  text-transform: uppercase; }
   .heading-primary--light {
     color: #fff; }
 
 .heading-secondary {
   font-size: 6rem;
-  font-weight: 700; }
+  font-weight: 700;
+  line-height: 1.2em;
+  text-transform: uppercase;
+  color: #333; }
 
 .heading-tertiary {
   font-size: 2.4rem; }
@@ -79,10 +102,19 @@ img {
   margin: 0;
   padding: 0; }
 
+.m-bottom-5 {
+  margin-bottom: 5rem; }
+
+.m-bottom-6 {
+  margin-bottom: 6rem; }
+
+.m-top-7 {
+  margin-top: 7rem; }
+
 .wrapper {
   display: grid;
   grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
-  grid-template-rows: min-content 70vh min-content; }
+  grid-template-rows: min-content 70vh repeat(4, min-content); }
   .wrapper--inner {
     display: grid;
     grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
@@ -171,6 +203,19 @@ img {
   .main-header__desc {
     max-width: 65rem; }
 
+.main-footer {
+  grid-column: full-start / full-end;
+  background-color: #333; }
+  .main-footer__content {
+    grid-column: center-start / center-end;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center; }
+  .main-footer__soc-media {
+    justify-self: end; }
+  .main-footer__copy {
+    font-weight: 300; }
+
 .shop-nav__list {
   display: flex;
   flex-direction: row;
@@ -249,7 +294,32 @@ img {
   .btn--white {
     color: #fff; }
 
+.social-media {
+  display: grid;
+  grid-template-columns: repeat(3, max-content);
+  grid-column-gap: 1.5rem; }
+  .social-media__link {
+    color: #666;
+    font-size: 2.5rem;
+    display: block;
+    padding: .5rem; }
+
+.home-content {
+  grid-column: center-start / center-end;
+  padding: 15rem 0; }
+  .home-content__cont {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(38rem, 1fr));
+    grid-column-gap: 7rem; }
+
 .stacked-images {
   grid-column: full-start / full-end;
   display: grid;
   grid-template-columns: repeat(4, 1fr); }
+
+.bg-blur {
+  grid-column: full-start / full-end;
+  background: no-repeat url(../../img/travel-landscape-13.png) center top/cover; }
+  .bg-blur__content {
+    grid-column: center-start / center-end; }

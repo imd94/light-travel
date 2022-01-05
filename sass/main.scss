@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Roboto:wght@300;400;500;600;700&display=swap');
 
 @import "abstracts/variables";
+@import "abstracts/mixins";
 
 @import "base/base";
 @import "base/typography";
@@ -9,9 +10,12 @@
 @import "layout/wrapper";
 @import "layout/navigation";
 @import "layout/header";
+@import "layout/footer";
 @import "layout/shop-nav";
 
 @import "components/buttons";
-@import "components/stacked-imgs";
+@import "components/social-media";
+
+@import "pages/home";
 
 

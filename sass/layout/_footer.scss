@@ -1,0 +1,20 @@
+.main-footer {
+    grid-column: full-start / full-end;
+    background-color: $colorGreyDark2;
+
+    &__content {
+        grid-column: center-start / center-end;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+    }
+
+    &__soc-media {
+        justify-self: end;
+    }
+
+    &__copy {
+        font-weight: 300;
+
+    }
+}

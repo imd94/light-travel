@@ -1,0 +1,28 @@
+
+.home-content {
+    grid-column: center-start / center-end;
+    padding: 15rem 0; 
+
+    &__cont {
+        grid-column: 1 / -1;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(38rem, 1fr));
+        grid-column-gap: 7rem;
+    }
+}
+
+.stacked-images {
+    grid-column: full-start / full-end;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.bg-blur {
+    grid-column: full-start / full-end;
+    background: no-repeat url(../../img/travel-landscape-13.png) center top/ cover;
+
+    &__content {
+        grid-column: center-start / center-end;
+    }
+}

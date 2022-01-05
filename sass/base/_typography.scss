@@ -30,6 +30,11 @@ img {
         color: $colorWhite;
     }
 
+    &--dark {
+        color: $colorGreyDark2;
+        font-weight: 500;
+    }
+
     &--medium {
         font-size: 2rem;
         line-height: 1.4;
@@ -37,6 +42,27 @@ img {
 
     &--large {
         font-size: 2.4rem;
+        line-height: 1.4;
+    }
+}
+
+.pseudo-border {
+    position: relative;
+    padding-bottom: 4rem;
+
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        display: block;
+        width: 17rem;
+        height: .3rem;
+        background-color: $colorFirst;
+    }
+
+    &--white::after {
+        background-color: $colorWhite;
     }
 }
 
@@ -44,6 +70,7 @@ img {
     font-size: 8rem;
     font-weight: 700;
     color: $colorGreyDark2;
+    text-transform: uppercase;
 
     &--light {
         color: $colorWhite;
@@ -53,6 +80,9 @@ img {
 .heading-secondary {
     font-size: 6rem;
     font-weight: 700;
+    line-height: 1.2em;
+    text-transform: uppercase;
+    color: $colorGreyDark2;
 }
 
 .heading-tertiary {
