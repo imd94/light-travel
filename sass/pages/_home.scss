@@ -1,7 +1,10 @@
 
 .home-content {
     grid-column: center-start / center-end;
-    padding: 15rem 0; 
+    padding: 10rem 0; 
+    @include sm {
+        padding: 15rem 0; 
+    }
 
     &__cont {
         grid-column: 1 / -1;
@@ -21,8 +24,15 @@
 .bg-blur {
     grid-column: full-start / full-end;
     background: no-repeat url(../../img/travel-landscape-13.png) center top/ cover;
+    padding-top: 15rem;
 
     &__content {
         grid-column: center-start / center-end;
+
+        text-align: center;
+    }
+
+    &__couple {
+        grid-column: 1 / -1;
     }
 }

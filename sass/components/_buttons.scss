@@ -5,13 +5,17 @@
     &:visited {
         display: inline-block;
         font-family: 'Oswald', sans-serif;
-        font-size: 2rem;
+        font-size: 1.6rem;
         font-weight: 700;
         text-transform: uppercase;
         letter-spacing: .25rem;
         padding: .75rem 1.75rem;
         border: .2rem solid $colorWhite;
         transition: .2s all ease;
+
+        @include sm {
+            font-size: 2rem;
+        }
     }
 
     &::after {
@@ -37,21 +41,9 @@
     &--white {
         color: $colorWhite;
     }
-    
-    /* &:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 1rem 2rem rgba($color-black,.2);
 
-        &::after {
-            transform: scaleX(1.4) scaleY(1.6);
-            opacity: 0;
-        }
-    } */
-    
-    /* &:active,
-    &:focus {
-        outline: none;
-        transform: translateY(-1px);
-        box-shadow: 0 .5rem 1rem rgba($color-black,.2);
-    } */
+    &--red {
+        color: $colorWhite;
+        background-color: $colorFirst;
+    }
 }

@@ -1,6 +1,13 @@
 
 .main-header {
     grid-column: full-start / full-end;
+    height: 50vh;
+    @include sm {
+        height: 60vh;
+    }
+    @include md {
+        height: 70vh;
+    }
 
     background-image: linear-gradient(
         to right bottom,
