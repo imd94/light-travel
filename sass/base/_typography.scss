@@ -25,6 +25,9 @@ img {
 .graph {
     font-size: 1.6rem;
     color: $colorGreyDark1;
+    &:not(:last-child) {
+        margin-bottom: 1.5rem;
+    }
 
     &--white {
         color: $colorWhite;
@@ -100,6 +103,10 @@ img {
     } 
     @include md {
         font-size: 6rem;
+    }
+
+    &--align-right {
+        text-align: right;
     }
 }
 

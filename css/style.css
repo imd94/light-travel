@@ -40,6 +40,8 @@ img {
 .graph {
   font-size: 1.6rem;
   color: #666; }
+  .graph:not(:last-child) {
+    margin-bottom: 1.5rem; }
   .graph--white {
     color: #fff; }
   .graph--dark {
@@ -99,6 +101,8 @@ img {
   @media (min-width: 990px) {
     .heading-secondary {
       font-size: 6rem; } }
+  .heading-secondary--align-right {
+    text-align: right; }
 
 .heading-tertiary {
   font-size: 2.4rem; }
@@ -280,6 +284,8 @@ img {
   @media (min-width: 990px) {
     .main-header {
       height: 70vh; } }
+  .main-header--landing {
+    height: 100vh; }
   .main-header__content {
     grid-column: center-start / center-end;
     padding: 3rem 0;
@@ -392,7 +398,7 @@ img {
   @media (min-width: 768px) {
     .home-content {
       padding: 15rem 0; } }
-  .home-content__cont {
+  .home-content__container {
     grid-column: 1 / -1;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(38rem, 1fr));
@@ -412,3 +418,13 @@ img {
     text-align: center; }
   .bg-blur__couple {
     grid-column: 1 / -1; }
+
+.top-dest {
+  grid-column: full-start / full-end;
+  padding: 15rem 0;
+  background-color: #f4f4f4; }
+  .top-dest__content {
+    grid-column: center-start / center-end;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(38rem, 1fr));
+    grid-column-gap: 7rem; }

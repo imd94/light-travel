@@ -8,7 +8,6 @@
     @include md {
         height: 70vh;
     }
-
     background-image: linear-gradient(
         to right bottom,
         rgba($colorFourth, 0.8),
@@ -16,6 +15,10 @@
     url(../img/travel-landscape-01.jpg);
     background-size: cover;
     background-position: top center;
+
+    &--landing {
+        height: 100vh;
+    }
 
     &__content {
         grid-column: center-start / center-end;
