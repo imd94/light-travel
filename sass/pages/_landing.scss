@@ -1,12 +1,12 @@
 .top-dest {
-    grid-column: full-start / full-end;
-    padding: 15rem 0; 
+    row-gap: 12rem;
+    padding: 15rem 0 12rem; 
     background-color: $colorGreyLight1;
 
     &__content {
         grid-column: center-start / center-end;
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(38rem, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(50vw, 1fr));
         grid-column-gap: 7rem;
     }
 }

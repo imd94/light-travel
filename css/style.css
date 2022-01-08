@@ -13,11 +13,6 @@ html {
 body {
   box-sizing: border-box; }
 
-img {
-  vertical-align: bottom;
-  width: 100%;
-  height: auto; }
-
 body {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
@@ -137,15 +132,21 @@ img {
 .m-bottom-7 {
   margin-bottom: 6rem; }
 
+.m-bottom-10 {
+  margin-bottom: 10rem; }
+
+.m-top-5 {
+  margin-top: 5rem; }
+
+.m-top-6 {
+  margin-top: 6rem; }
+
 .m-top-7 {
   margin-top: 7rem; }
 
 .wrapper {
   display: grid;
   grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
-  .wrapper--inner {
-    display: grid;
-    grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
 
 .main-nav {
   grid-column: full-start / full-end;
@@ -273,7 +274,6 @@ img {
         display: none; } }
 
 .main-header {
-  grid-column: full-start / full-end;
   height: 50vh;
   background-image: linear-gradient(to right bottom, rgba(32, 41, 47, 0.8), rgba(32, 41, 47, 0.8)), url(../img/travel-landscape-01.jpg);
   background-size: cover;
@@ -298,7 +298,6 @@ img {
     max-width: 65rem; }
 
 .main-footer {
-  grid-column: full-start / full-end;
   background-color: #333; }
   .main-footer__content {
     grid-column: center-start / center-end;
@@ -352,7 +351,8 @@ img {
   text-transform: uppercase;
   letter-spacing: .25rem;
   padding: .75rem 1.75rem;
-  border: 0.2rem solid #fff;
+  border-width: .2rem;
+  border-style: solid;
   transition: .2s all ease; }
   @media (min-width: 768px) {
     .btn, .btn:link, .btn:visited {
@@ -375,12 +375,18 @@ img {
     visibility: visible;
     opacity: 1; }
 
+.btn--default {
+  color: #1a1a1a;
+  border-color: #1a1a1a; }
+
 .btn--white {
-  color: #fff; }
+  color: #fff;
+  border-color: #fff; }
 
 .btn--red {
   color: #fff;
-  background-color: #ed4441; }
+  background-color: #ed4441;
+  border-color: #fff; }
 
 .social-media {
   display: grid;
@@ -393,24 +399,27 @@ img {
     padding: .5rem; }
 
 .home-content {
-  grid-column: center-start / center-end;
   padding: 10rem 0; }
   @media (min-width: 768px) {
     .home-content {
       padding: 15rem 0; } }
   .home-content__container {
-    grid-column: 1 / -1;
+    grid-column: 2 / span 8;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(38rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
     grid-column-gap: 7rem; }
 
 .stacked-images {
-  grid-column: full-start / full-end;
   display: grid;
   grid-template-columns: repeat(4, 1fr); }
+  .stacked-images__btn {
+    grid-column: 1 / -1;
+    justify-self: center; }
+  .stacked-images--landing {
+    grid-column: 1 / -1;
+    background-color: #f4f4f4; }
 
 .bg-blur {
-  grid-column: full-start / full-end;
   background: no-repeat url(../../img/travel-landscape-13.png) center top/cover;
   padding-top: 15rem; }
   .bg-blur__content {
@@ -420,11 +429,11 @@ img {
     grid-column: 1 / -1; }
 
 .top-dest {
-  grid-column: full-start / full-end;
-  padding: 15rem 0;
+  row-gap: 12rem;
+  padding: 15rem 0 12rem;
   background-color: #f4f4f4; }
   .top-dest__content {
     grid-column: center-start / center-end;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(38rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(50vw, 1fr));
     grid-column-gap: 7rem; }

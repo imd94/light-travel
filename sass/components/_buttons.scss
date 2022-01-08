@@ -10,7 +10,8 @@
         text-transform: uppercase;
         letter-spacing: .25rem;
         padding: .75rem 1.75rem;
-        border: .2rem solid $colorWhite;
+        border-width: .2rem;
+        border-style: solid;
         transition: .2s all ease;
 
         @include sm {
@@ -38,12 +39,19 @@
         }
     }
 
+    &--default {
+        color: $colorGreyDark3;
+        border-color: $colorGreyDark3;
+    }
+
     &--white {
         color: $colorWhite;
+        border-color: $colorWhite;
     }
 
     &--red {
         color: $colorWhite;
         background-color: $colorFirst;
+        border-color: $colorWhite;
     }
 }
