@@ -6,7 +6,22 @@
     &__content {
         grid-column: center-start / center-end;
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(50vw, 1fr));
+        grid-template-columns: 1fr;
         grid-column-gap: 7rem;
+        @include md {
+            grid-template-columns: repeat(2, 1fr);
+        }
     }
+}
+
+.video-tour {
+    padding: 15rem 0;
+
+    &__content {
+        grid-column: center-start / center-end;
+
+        display: grid;
+        justify-items: center;
+    }
+
 }

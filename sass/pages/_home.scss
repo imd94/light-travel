@@ -8,14 +8,23 @@
     &__container {
         grid-column: 2 / span 8;
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
+        grid-template-columns: 1fr; 
         grid-column-gap: 7rem;
+        @include md {
+            grid-template-columns: repeat(2, 1fr);
+        }
     } 
 }
 
 .stacked-images {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: 1fr;
+    @include xxs {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @include sm {
+        grid-template-columns: repeat(4, 1fr);
+    }
 
     &__btn {
         grid-column: 1 / -1;

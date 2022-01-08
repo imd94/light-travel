@@ -53,11 +53,15 @@ img {
             font-size: 2.4rem;
         }
     }
+
+    &--centered {
+        max-width: 80rem;
+        text-align: center;
+    }
 }
 
 .pseudo-border {
     position: relative;
-    padding-bottom: 4rem;
 
     &::after {
         content: "";
@@ -72,6 +76,11 @@ img {
 
     &--white::after {
         background-color: $colorWhite;
+    }
+
+    &--centered::after {
+        left: 50%;
+        transform: translateX(-50%);
     }
 }
 
