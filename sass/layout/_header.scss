@@ -16,7 +16,13 @@
     background-position: top center;
 
     &--landing {
-        height: 100vh;
+        height: 50vh;
+        @include sm {
+            height: 75vh;
+        }
+        @include md {
+            height: 100vh;
+        }
     }
 
     &__content {

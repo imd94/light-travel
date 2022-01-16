@@ -1,11 +1,14 @@
 
-.home-content {
-    padding: 10rem 0; 
-    @include sm {
-        padding: 15rem 0; 
+.home-side {
+    padding: 12vw 0; 
+    @include xs {
+        padding: 10vw 0; 
+    }
+    @include md {
+        padding: 8vw 0; 
     }
 
-    &__container {
+    &__content {
         grid-column: 2 / span 8;
         display: grid;
         grid-template-columns: 1fr; 

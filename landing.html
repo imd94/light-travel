@@ -32,7 +32,7 @@
             
             <div class="main-nav__list-wrapper">
                 <span class="main-nav__close-btn">Zatvori <i class="fas fa-times"></i></span>
-                <ul class="main-nav__list clear-list">
+                <ul class="main-nav__list">
                     <li class="main-nav__item main-nav__item--active">
                         <a class="main-nav__link" href="index.html">Home</a>
                     </li>
@@ -52,7 +52,7 @@
                     <li class="main-nav__item">
                         <a class="main-nav__link" href="#">About</a>
 
-                        <ul class="main-nav__list main-nav__list--child clear-list">
+                        <ul class="main-nav__list main-nav__list--child">
                             <li class="main-nav__item main-nav__item--child">
                                 <a class="main-nav__link main-nav__link--child" href="#">Team</a>
                             </li>
@@ -71,7 +71,7 @@
             </div>    
             
             <div class="shop-nav">
-                <ul class="shop-nav__list clear-list">
+                <ul class="shop-nav__list">
                     <li class="shop-nav__item">
                         <a class="shop-nav__link" href="#">
                             <span class="shop-nav__counter">5</span>
@@ -101,20 +101,20 @@
     </header> <!-- end main-header -->
 
 
-    <section class="home-content wrapper">
-        <div class="home-content__container">
-            <div class="home-content__desc">
-                <p class="home-content__intro graph--large graph--dark pseudo-border m-bottom-6 p-bottom-5">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit laborum.</p>
-                <p class="graph">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip sunt in culpa qui officia deserunt mollit laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip sunt in culpa qui officia deserunt mollit laborum.</p>
-                <img class="home-content__img m-top-7" src="img/travel-coffee.jpg" alt="Travel Coffe guy"> 
+    <section class="home-side wrapper">
+        <div class="home-side__content">
+            <div class="home-side__desc">
+                <p class="home-side__intro graph--large graph--dark pseudo-border m-bottom-6 p-bottom-5">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit laborum.</p>
+                <p class="graph m-bottom-7">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip sunt in culpa qui officia deserunt mollit laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip sunt in culpa qui officia deserunt mollit laborum.</p>
+                <img class="home-side__img m-bottom-2" src="img/travel-coffee.jpg" alt="Travel Coffe guy"> 
             </div>   
     
-            <div class="home-content__box">
-                <h2 class="heading-secondary heading-secondary--align-right m-bottom-5">Discover<br> unlimited beauty</h2>
-                <img class="home-content__img m-top-7" src="img/travel-landscape-12.jpg" alt="Travel guy"> 
+            <div class="home-side__box">
+                <h2 class="heading-secondary heading-secondary--align-right m-bottom-7">Discover<br> unlimited beauty</h2>
+                <img class="home-side__img" src="img/travel-landscape-12.jpg" alt="Travel guy"> 
             </div>       
         </div>
-    </section>
+    </section> <!-- end home-side -->
 
 
     <section class="top-dest wrapper">
@@ -129,7 +129,7 @@
                 <p class="graph graph--dark">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
                 <p class="graph graph--dark">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
             </div>  
-        </div>
+        </div> <!-- end top-dest__content -->
 
         <div class="stacked-images stacked-images--landing"> 
             <a class="stacked-link" data-gall="myGallery" href="img/travel-landscape-01.jpg">
@@ -147,10 +147,10 @@
             <a class="stacked-link" data-gall="myGallery" href="img/travel-landscape-18.jpg">
                 <img class="stacked-link__img" src="img/travel-landscape-11.jpg" alt="Image One">
             </a>   
-        </div>
+        </div> <!-- end stacked-images -->
 
         <a href="#" class="btn btn--default stacked-images__btn">Learn More</a>   
-    </section>
+    </section> <!-- end top-dest -->
 
 
     <section class="video-tour wrapper">
@@ -163,7 +163,164 @@
                 <iframe class="video-tour__frame" src="https://www.youtube.com/embed/4xgOWWfurpU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
         </div>
-    </section>
+    </section> <!-- end video-tour -->
+
+
+    <section class="gallery-view wrapper">
+        <div class="gallery-view__header">
+            <h2 class="heading-secondary m-bottom-4 pseudo-border p-bottom-6">A look inside the world!</h2>
+            <p class="gallery-view__intro graph--large graph--dark m-bottom-5">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit laborum.</p>
+            <p class="graph m-bottom-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.</p>
+            <a href="#" class="gallery-view__btn btn btn--default">View Gallery</a>
+        </div> 
+    </section> <!-- end gallery-view -->
+
+
+    <section class="more-places wrapper">
+        <div class="more-places__content">
+            <h2 class="heading-secondary more-places__heading m-bottom-4 pseudo-border p-bottom-6">More Places</h2>
+
+            <aside class="more-places__box more-places__box--1">
+                <h3 class="heading-tertiary m-bottom-2">South Asia</h3>
+                <ul class="more-places__list">
+                    <li class="more-places__item">
+                        <a class="more-places__link" href="#">Bangladesh</a>
+                    </li>
+
+                    <li class="more-places__item">
+                        <a class="more-places__link" href="#">Maldives</a>
+                    </li>
+
+                    <li class="more-places__item">
+                        <a class="more-places__link" href="#">Pakistan</a>
+                    </li>
+
+                    <li class="more-places__item">
+                        <a class="more-places__link" href="#">Nepal</a>
+                    </li>
+
+                    <li class="more-places__item">
+                        <a class="more-places__link" href="#">India</a>
+                    </li>
+                </ul>
+            </aside>
+
+            <aside class="more-places__box more-places__box--2">
+                <h3 class="heading-tertiary m-bottom-2">South Asia</h3>
+                <ul class="more-places__list">
+                    <li class="more-places__item">
+                        <a class="more-places__link" href="#">Panama</a>
+                    </li>
+
+                    <li class="more-places__item">
+                        <a class="more-places__link" href="#">Nicaragua</a>
+                    </li>
+
+                    <li class="more-places__item">
+                        <a class="more-places__link" href="#">Bahamas</a>
+                    </li>
+
+                    <li class="more-places__item">
+                        <a class="more-places__link" href="#">Canada</a>
+                    </li>
+
+                    <li class="more-places__item">
+                        <a class="more-places__link" href="#">Mexico</a>
+                    </li>                   
+                </ul>
+            </aside>
+
+            <aside class="more-places__box more-places__box--3">
+                <h3 class="heading-tertiary m-bottom-2">Middle East</h3>
+                <ul class="more-places__list">
+                    <li class="more-places__item">
+                        <a class="more-places__link" href="#">Bahrain</a>
+                    </li>
+
+                    <li class="more-places__item">
+                        <a class="more-places__link" href="#">Cyprus</a>
+                    </li>
+
+                    <li class="more-places__item">
+                        <a class="more-places__link" href="#">Egypt</a>
+                    </li>
+
+                    <li class="more-places__item">
+                        <a class="more-places__link" href="#">Iran</a>
+                    </li>
+
+                    <li class="more-places__item">
+                        <a class="more-places__link" href="#">Jordan</a>
+                    </li>
+
+                    <li class="more-places__item">
+                        <a class="more-places__link" href="#">Kuwait</a>
+                    </li>
+                </ul>
+            </aside>
+
+            <aside class="more-places__box more-places__box--4">
+                <h3 class="heading-tertiary m-bottom-2">South America</h3>
+                <ul class="more-places__list">
+                    <li class="more-places__item">
+                        <a class="more-places__link" href="#">Guyana</a>
+                    </li>
+
+                    <li class="more-places__item">
+                        <a class="more-places__link" href="#">Paraguay</a>
+                    </li>
+
+                    <li class="more-places__item">
+                        <a class="more-places__link" href="#">Colombia</a>
+                    </li>
+
+                    <li class="more-places__item">
+                        <a class="more-places__link" href="#">Bolivia</a>
+                    </li>
+
+                    <li class="more-places__item">
+                        <a class="more-places__link" href="#">Brazil</a>
+                    </li>
+                </ul>
+            </aside>    
+        </div> <!-- end more-places__content -->
+    </section> <!-- end more-places -->
+
+
+    <section class="exlusive-offer wrapper">
+        <div class="exlusive-offer__content">
+            <p class="exlusive-offer__subheading graph graph--large graph--white m-bottom-3">Exclusive Offer</p>
+            <h2 class="heading-secondary heading-secondary--light m-bottom-7 pseudo-border pseudo-border--white pseudo-border--centered p-bottom-5">Get 30% off your first trip</h2>
+            <p class="exlusive-offer__intro graph--large graph--white m-bottom-7">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+            <a href="#" class="exlusive-offer__btn btn btn--white">View Gallery</a>
+        </div> 
+    </section> <!-- end exlusive-offer -->
+
+
+    <section class="our-guides wrapper">
+        <div class="our-guides__content">
+            <h2 class="heading-secondary our-guides__heading pseudo-border pseudo-border--centered p-bottom-6">Our Guides</h2>
+            <p class="our-guides__intro graph--large graph--dark graph--centered">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit laborum.</p>
+
+            <aside class="our-guides__box our-guides__box--1">
+                <img class="m-bottom-2" src="img/travel-portrait-01.jpg" alt="Gabe Scotts Profile">
+                <h3 class="heading-tertiary m-bottom-1">Gabe Scott</h3>
+                <p class="graph">Hiking Guide</p>   
+            </aside>
+
+            <aside class="our-guides__box our-guides__box--2">
+                <img class="m-bottom-2" src="img/travel-portrait-03.jpg" alt="Denis Novas Profile">
+                <h3 class="heading-tertiary m-bottom-1">Denis Nova</h3>
+                <p class="graph">Outdoor Survival</p>   
+            </aside>
+            
+            <aside class="our-guides__box our-guides__box--3">
+                <img class="m-bottom-2" src="img/travel-portrait-04.jpg" alt="Brian Adons Profile">
+                <h3 class="heading-tertiary m-bottom-1">Brian Adon</h3>
+                <p class="graph">Mountaineer</p>   
+            </aside>
+        </div>   
+    </section> <!-- end our-guides -->
 
 
     <section class="bg-blur wrapper">
@@ -172,7 +329,7 @@
             <a href="#" class="main-header__btn btn btn--red">Get in touch</a>
         </div>
         <img class="bg-blur__couple" src="img/couple2.png" alt="Couple">
-    </section>
+    </section> <!-- end bg-blur -->
 
 
     <footer class="main-footer wrapper">  
@@ -185,7 +342,7 @@
                 <a class="social-media__link" href="#"><span class="social-media__icon"><i class="fab fa-instagram"></i></span></a>
             </div>
         </div>  
-    </footer>
+    </footer> <!-- end main-footer -->
 
     <!-- Venobox JS -->
     <script src="js/venobox.min.js"></script>

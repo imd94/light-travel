@@ -1,7 +1,13 @@
 .top-dest {
     row-gap: 12rem;
-    padding: 15rem 0 12rem; 
+    padding: 12vw 0; 
     background-color: $colorGreyLight1;
+    @include xs {
+        padding: 10vw 0; 
+    }
+    @include md {
+        padding: 8vw 0; 
+    }
 
     &__content {
         grid-column: center-start / center-end;
@@ -15,7 +21,13 @@
 }
 
 .video-tour {
-    padding: 15rem 0;
+    padding: 12vw 0; 
+    @include xs {
+        padding: 10vw 0; 
+    }
+    @include md {
+        padding: 8vw 0; 
+    }
 
     &__content {
         grid-column: center-start / center-end;
@@ -24,4 +36,144 @@
         justify-items: center;
     }
 
+}
+
+.gallery-view {
+    background-image: url(../../img/travel-landscape-03.jpg);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+    background-attachment: fixed;
+
+    grid-template-rows: min-content 10vw;
+    &::before {
+        content: '';
+        display: block;
+        grid-column: full-start / full-end;
+        grid-row: 1 / 2;
+        background-color: rgba($colorWhite, .85);
+        @include md {
+            grid-column: col-start 5 / full-end;
+        }
+    }
+    &::after {
+        content: '';
+        display: block;
+        grid-column: full-start / full-end;
+        grid-row: 2 / -1;
+        background-color: rgba($colorWhite, .85);
+    }
+
+    &__header {
+        grid-column: full-start / full-end;
+        grid-row: 1 / 2;
+        padding: 8vw 6vw 8vw 6vw;
+
+        @include md {
+            grid-column: col-start 5 / center-end;
+            padding: 6vw 0 6vw 6vw;
+        }
+    }
+}
+
+
+.more-places {
+    padding: 12vw 0; 
+    @include xs {
+        padding: 10vw 0; 
+    }
+    @include md {
+        padding: 8vw 0; 
+    }
+    &__content {
+        grid-column: center-start / center-end;
+
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 5rem;
+
+        @include xxs {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include md {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+
+    &__heading {
+        grid-column: 1 / -1;
+    }
+
+    &__link {
+        display: inline-block;
+        padding: .5rem 0;
+        color: $colorThird;
+    }
+}
+
+
+.exlusive-offer {
+    background-image: linear-gradient(
+    to right bottom,
+    rgba($colorDark, .55),
+    rgba($colorDark, .55)
+    ),
+    url(../../img/travel-landscape-17.jpg);
+    background-position: center top;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 12vw 0; 
+    @include xs {
+        padding: 10vw 0; 
+    }
+    @include md {
+        padding: 8vw 0; 
+    }
+    &__content {
+        grid-column: center-start / center-end;
+        text-align: center;
+
+        @include md {
+            grid-column: 3 / 9;
+        }
+    }
+
+    &__subheading {
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        font-weight: 700;
+    }
+}
+
+
+.our-guides {
+    padding: 12vw 0; 
+    @include xs {
+        padding: 10vw 0; 
+    }
+    @include md {
+        padding: 8vw 0; 
+    }
+    &__content {
+        grid-column: center-start / center-end;
+
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-row-gap: 6rem;
+        text-align: center;
+        @include sm {
+            grid-template-columns: repeat(3, 1fr);
+            grid-column-gap: 5%;
+        }
+    }
+
+    &__heading {
+        grid-column: 1 / -1;
+    }
+
+    &__intro {
+        grid-column: 1 / -1;
+        justify-self: center; 
+    }
 }

@@ -22,6 +22,12 @@ img {
     height: auto;
 }
 
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
 .graph {
     font-size: 1.6rem;
     color: $colorGreyDark1;
@@ -114,6 +120,10 @@ img {
         font-size: 6rem;
     }
 
+    &--light {
+        color: $colorWhite;
+    }
+
     &--align-right {
         text-align: right;
     }
@@ -121,6 +131,9 @@ img {
 
 .heading-tertiary {
     font-size: 2.4rem;
+    font-weight: 700;
+    color: $colorGreyDark2;
+    text-transform: uppercase;
 }
 
 .light-logo {
