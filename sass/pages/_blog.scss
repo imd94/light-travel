@@ -1,0 +1,66 @@
+.page-blog {
+    background-color: $colorGreyLight1;
+}
+
+.blog-archive {
+    padding: 12vw 0; 
+    @include xs {
+        padding: 10vw 0; 
+    }
+    @include md {
+        padding: 8vw 0; 
+    }
+
+    &__content {
+        grid-column: center-start / center-end;
+
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+        grid-template-rows: repeat(2, min-content);
+        grid-column-gap: 5%;
+        grid-row-gap: 5rem;
+        justify-items: start;
+        align-items: start;
+    }
+}
+
+.newsletter {
+    background-image: linear-gradient(
+    to right bottom,
+    rgba($colorDark, .55),
+    rgba($colorDark, .55)
+    ),
+    url(../../img/travel-landscape-17.jpg);
+    background-position: center top;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 12vw 0; 
+    @include xs {
+        padding: 10vw 0; 
+    }
+    @include md {
+        padding: 8vw 0; 
+    }
+
+    &__content {
+        grid-column: center-start / center-end;
+
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 5rem;
+
+        @include sm {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    &__form-wrapper {
+        align-self: end;
+    }
+
+    &__subheading {
+        text-transform: uppercase;
+        font-weight: 700;
+        letter-spacing: 3px;
+    }
+}

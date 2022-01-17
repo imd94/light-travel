@@ -1,0 +1,19 @@
+
+.shop-archive {
+    padding: 12vw 0; 
+    @include xs {
+        padding: 10vw 0; 
+    }
+    @include md {
+        padding: 8vw 0; 
+    }
+
+    &__content {
+        grid-column: center-start / center-end;
+
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+        grid-column-gap: 5%;
+        grid-row-gap: 5rem;
+    }
+}

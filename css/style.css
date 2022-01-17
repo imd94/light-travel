@@ -39,7 +39,8 @@ ul {
 
 .graph {
   font-size: 1.6rem;
-  color: #666; }
+  color: #666;
+  font-weight: 500; }
   .graph:not(:last-child) {
     margin-bottom: 1.5rem; }
   .graph--white {
@@ -110,12 +111,18 @@ ul {
     color: #fff; }
   .heading-secondary--align-right {
     text-align: right; }
+  .heading-secondary--align-center {
+    text-align: center; }
 
 .heading-tertiary {
   font-size: 2.4rem;
   font-weight: 700;
   color: #333;
   text-transform: uppercase; }
+  .heading-tertiary--capital {
+    text-transform: capitalize; }
+  .heading-tertiary--weight-medium {
+    font-weight: 500; }
 
 .light-logo {
   font-size: 3rem;
@@ -366,6 +373,7 @@ ul {
   grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
 
 .main-nav {
+  background-color: #fff;
   grid-column: full-start / full-end;
   padding: 1rem 0; }
   .main-nav__content {
@@ -491,18 +499,17 @@ ul {
         display: none; } }
 
 .main-header {
-  height: 50vh;
+  height: auto;
+  padding: 12vw 0;
   background-image: linear-gradient(to right bottom, rgba(32, 41, 47, 0.8), rgba(32, 41, 47, 0.8)), url(../img/travel-landscape-01.jpg);
   background-size: cover;
   background-position: top center; }
-  @media (min-width: 768px) {
-    .main-header {
-      height: 60vh; } }
   @media (min-width: 990px) {
     .main-header {
       height: 70vh; } }
   .main-header--landing {
-    height: 50vh; }
+    height: auto;
+    padding: 12vw 0; }
     @media (min-width: 768px) {
       .main-header--landing {
         height: 75vh; } }
@@ -519,6 +526,18 @@ ul {
     justify-items: start; }
   .main-header__desc {
     max-width: 65rem; }
+
+.blog-header,
+.shop-header {
+  padding-top: 12vw; }
+  @media (min-width: 545px) {
+    .blog-header,
+    .shop-header {
+      padding-top: 10vw; } }
+  @media (min-width: 990px) {
+    .blog-header,
+    .shop-header {
+      padding-top: 8vw; } }
 
 .main-footer {
   background-color: #333; }
@@ -576,7 +595,8 @@ ul {
   padding: .75rem 1.75rem;
   border-width: .2rem;
   border-style: solid;
-  transition: .2s all ease; }
+  transition: .2s all ease;
+  cursor: pointer; }
   @media (min-width: 768px) {
     .btn, .btn:link, .btn:visited {
       font-size: 2rem; } }
@@ -611,6 +631,10 @@ ul {
   background-color: #ed4441;
   border-color: #fff; }
 
+.btn--full-width {
+  display: block;
+  width: 100%; }
+
 .social-media {
   display: grid;
   grid-template-columns: repeat(3, max-content);
@@ -634,6 +658,114 @@ ul {
     left: 0;
     width: 100%;
     height: 100%; }
+
+.blog-feature {
+  background-color: #fff; }
+  .blog-feature__content {
+    padding: 3rem 2rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, min-content);
+    grid-row-gap: 1.5rem; }
+  .blog-feature__meta {
+    color: rgba(102, 102, 102, 0.6);
+    font-size: 1.4rem; }
+    .blog-feature__meta a {
+      color: rgba(102, 102, 102, 0.6); }
+  .blog-feature p {
+    margin-top: -5px;
+    line-height: 1.9; }
+
+.light-form__input {
+  display: block;
+  width: 100%;
+  padding: 1.5rem;
+  border-radius: .5rem;
+  border: none;
+  border-bottom: 3px solid transparent;
+  transition: .3s all ease; }
+  .light-form__input:focus {
+    outline: none;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+    border-bottom: 3px solid #ed4441; }
+  .light-form__input:focus:invalid {
+    border-bottom: 3px solid #ef8f61; }
+  .light-form__input::input-placeholder {
+    color: rgba(51, 51, 51, 0.5); }
+  .light-form__input::-webkit-input-placeholder {
+    color: rgba(51, 51, 51, 0.5); }
+
+.light-form__group {
+  margin-bottom: 2rem; }
+
+.product__link, .product__link:link, .product__link:visited {
+  display: block;
+  text-decoration: none;
+  color: #666; }
+
+.product__thumbnail {
+  position: relative;
+  border: 1px solid transparent; }
+  .product__thumbnail:hover {
+    border-color: rgba(102, 102, 102, 0.2); }
+    .product__thumbnail:hover .product__thumb-hover {
+      visibility: visible;
+      opacity: 1; }
+
+.product__thumb-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  visibility: hidden;
+  opacity: 0;
+  transition: .3s all ease-in-out; }
+  .product__thumb-hover-icon {
+    font-size: 3rem;
+    color: #2ea3f2; }
+
+.product__sale-badge {
+  display: inline-block;
+  background-color: #ef8f61;
+  color: #fff;
+  padding: .5rem 1.5rem;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  border-radius: .25rem; }
+
+.product__rating {
+  position: relative;
+  font-size: 1.2rem; }
+  .product__rating::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: '\f005\f005\f005\f005\f005';
+    color: rgba(102, 102, 102, 0.5); }
+  .product__rating::after {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: '\f005\f005\f005\f005';
+    color: #2ea3f2;
+    position: absolute;
+    top: 0;
+    left: 0; }
+
+.product__price {
+  color: #ed4441; }
+  .product__price ins {
+    font-weight: 700;
+    text-decoration: none; }
+  .product__price del {
+    opacity: .5; }
 
 .home-side {
   padding: 12vw 0; }
@@ -812,3 +944,66 @@ ul {
   .our-guides__intro {
     grid-column: 1 / -1;
     justify-self: center; }
+
+.page-blog {
+  background-color: #f4f4f4; }
+
+.blog-archive {
+  padding: 12vw 0; }
+  @media (min-width: 545px) {
+    .blog-archive {
+      padding: 10vw 0; } }
+  @media (min-width: 990px) {
+    .blog-archive {
+      padding: 8vw 0; } }
+  .blog-archive__content {
+    grid-column: center-start / center-end;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-template-rows: repeat(2, min-content);
+    grid-column-gap: 5%;
+    grid-row-gap: 5rem;
+    justify-items: start;
+    align-items: start; }
+
+.newsletter {
+  background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url(../../img/travel-landscape-17.jpg);
+  background-position: center top;
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 12vw 0; }
+  @media (min-width: 545px) {
+    .newsletter {
+      padding: 10vw 0; } }
+  @media (min-width: 990px) {
+    .newsletter {
+      padding: 8vw 0; } }
+  .newsletter__content {
+    grid-column: center-start / center-end;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 5rem; }
+    @media (min-width: 768px) {
+      .newsletter__content {
+        grid-template-columns: 1fr 1fr; } }
+  .newsletter__form-wrapper {
+    align-self: end; }
+  .newsletter__subheading {
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 3px; }
+
+.shop-archive {
+  padding: 12vw 0; }
+  @media (min-width: 545px) {
+    .shop-archive {
+      padding: 10vw 0; } }
+  @media (min-width: 990px) {
+    .shop-archive {
+      padding: 8vw 0; } }
+  .shop-archive__content {
+    grid-column: center-start / center-end;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-column-gap: 5%;
+    grid-row-gap: 5rem; }

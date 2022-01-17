@@ -1,9 +1,7 @@
 
 .main-header {
-    height: 50vh;
-    @include sm {
-        height: 60vh;
-    }
+    height: auto;
+    padding: 12vw 0; 
     @include md {
         height: 70vh;
     }
@@ -16,7 +14,8 @@
     background-position: top center;
 
     &--landing {
-        height: 50vh;
+        height: auto;
+        padding: 12vw 0; 
         @include sm {
             height: 75vh;
         }
@@ -39,4 +38,15 @@
      &__desc {
          max-width: 65rem;
      }
+}
+
+.blog-header,
+.shop-header {
+    padding-top: 12vw; 
+    @include xs {
+        padding-top: 10vw; 
+    }
+    @include md {
+        padding-top: 8vw; 
+    }
 }

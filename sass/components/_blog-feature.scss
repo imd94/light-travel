@@ -1,0 +1,25 @@
+.blog-feature {
+    background-color: $colorWhite;
+
+    &__content {
+        padding: 3rem 2rem;
+
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, min-content);
+        grid-row-gap: 1.5rem;
+    }
+
+    &__meta {
+        color: rgba($colorGreyDark1, .6);
+        font-size: 1.4rem;
+        a {
+            color: rgba($colorGreyDark1, .6);
+        }
+    }
+
+    p {
+        margin-top: -5px;
+        line-height: 1.9;
+    }
+}

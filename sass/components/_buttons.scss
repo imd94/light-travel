@@ -13,6 +13,7 @@
         border-width: .2rem;
         border-style: solid;
         transition: .2s all ease;
+        cursor: pointer;
 
         @include sm {
             font-size: 2rem;
@@ -53,5 +54,10 @@
         color: $colorWhite;
         background-color: $colorFirst;
         border-color: $colorWhite;
+    }
+
+    &--full-width {
+        display: block;
+        width: 100%;
     }
 }

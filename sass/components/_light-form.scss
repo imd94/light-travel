@@ -1,0 +1,32 @@
+.light-form {
+    &__input {
+        display: block;
+        width: 100%;
+        padding: 1.5rem;
+        border-radius: .5rem;
+        border: none;
+        border-bottom: 3px solid transparent;
+        transition: .3s all ease;
+
+        &:focus {
+            outline: none;
+            box-shadow: 0 1rem 2rem rgba($colorDark, 0.1);
+            border-bottom: 3px solid $colorFirst;
+        }
+      
+        &:focus:invalid {
+            border-bottom: 3px solid $colorSecond;
+        }
+    
+        &::input-placeholder {
+            color: rgba($colorGreyDark2, .5);
+        }
+        &::-webkit-input-placeholder {
+            color: rgba($colorGreyDark2, .5);
+        }
+    }
+
+    &__group {
+        margin-bottom: 2rem;
+    }
+}

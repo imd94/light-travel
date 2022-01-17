@@ -1,0 +1,92 @@
+.product {
+
+    &__link {
+        &,
+        &:link,
+        &:visited {
+            display: block;
+            text-decoration: none;
+            color: $colorGreyDark1;
+        }        
+    }
+
+    &__thumbnail {
+        position: relative;
+        border: 1px solid transparent;
+
+        &:hover {
+            border-color: rgba($colorGreyDark1, .2);
+            .product__thumb-hover {
+                visibility: visible;
+                opacity: 1;
+            }
+        }
+    }
+
+    &__thumb-hover {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-color: rgba($colorWhite, .8);
+        visibility: hidden;
+        opacity: 0;
+        transition: .3s all ease-in-out;
+
+        &-icon {
+            font-size: 3rem;
+            color: $colorThird;
+        }
+    }
+
+    &__sale-badge {
+        display: inline-block;
+        background-color: $colorSecond;
+        color: $colorWhite;
+        padding: .5rem 1.5rem;
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+        border-radius: .25rem;
+    }
+
+    &__rating {
+        position: relative;
+        font-size: 1.2rem;
+        &::before {
+            font-family: "Font Awesome 5 Free"; 
+            font-weight: 900;
+            content: '\f005\f005\f005\f005\f005';
+            color: rgba($colorGreyDark1, .5);
+        }
+        &::after {
+            font-family: "Font Awesome 5 Free"; 
+            font-weight: 900;
+            content: '\f005\f005\f005\f005';
+            color: $colorThird;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+
+    &__price {
+        color: $colorFirst;
+
+        ins {
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        del {
+            opacity: .5;
+        }
+    }
+}
