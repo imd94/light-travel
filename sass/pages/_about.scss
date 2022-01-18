@@ -1,0 +1,57 @@
+.counters-wrapper {
+    grid-column: center-start / center-end;
+    grid-row: 2 / 3;
+    
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-column-gap: 5%;
+    grid-row-gap: 5rem;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    padding: 8rem 0;
+    @include xs {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @include md {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    @include sm {
+        padding: 6vw 0;
+    }
+    position: relative;
+    z-index: 1;
+}
+
+.you-covered {
+    padding: 12vw 0; 
+    @include xs {
+        padding: 10vw 0; 
+    }
+    @include md {
+        padding: 8vw 0; 
+    }
+
+    &__heading {
+        grid-column: center-start / center-end;
+        text-align: center;
+    }
+
+    &__content {
+        grid-column: center-start / center-end;
+
+        display: grid;
+        grid-template-columns: 1fr;
+        max-width: 55rem;
+        @include md {
+            grid-template-columns: repeat(3, 1fr);
+            max-width: 100%;
+        }
+        grid-column-gap: 5%;
+        grid-row-gap: 5rem;
+        margin: 0 auto;
+
+        text-align: center;
+    }
+}

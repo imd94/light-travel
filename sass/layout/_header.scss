@@ -10,10 +10,11 @@
         rgba($colorFourth, 0.8),
         rgba($colorFourth, 0.8)),
     url(../img/travel-landscape-01.jpg);
+    background-repeat: no-repeat;
     background-size: cover;
     background-position: top center;
 
-    &--landing {
+    &--landing, &--about {
         height: auto;
         padding: 12vw 0; 
         @include sm {
@@ -21,6 +22,24 @@
         }
         @include md {
             height: 100vh;
+        }
+    }
+
+    &--about {
+        background-image: url(../img/travel-landscape-19.jpg);
+        background-position: bottom center;
+        background-attachment: fixed;
+        position: relative;
+
+        &__travel-person {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            display: none;
+            @include md {
+                max-width: 85vh;
+                display: block;
+            }
         }
     }
 
@@ -33,6 +52,19 @@
         align-content: center;
         justify-content: start; 
         justify-items: start;
+
+        &--about {
+            justify-content: end;  
+            grid-row-gap: 0;
+            padding: 0;
+            transform: translateY(0);
+            max-width: 40rem;
+            @include md {
+                transform: translateY(-15%);
+                grid-column: 7 / 10;
+                max-width: 100%;
+            }
+        }
      } 
 
      &__desc {
@@ -41,7 +73,8 @@
 }
 
 .blog-header,
-.shop-header {
+.shop-header,
+.packages-header {
     padding-top: 12vw; 
     @include xs {
         padding-top: 10vw; 

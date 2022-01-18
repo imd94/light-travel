@@ -1,0 +1,24 @@
+
+.package-feature {
+    grid-column: center-start / center-end;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-column-gap: 5%;
+
+    &:not(:last-child) {
+        margin-bottom: 5rem;
+    }
+
+    @include md {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    &__meta {
+        span {
+            display: block;
+            color: $colorGreyDark2;
+            font-weight: 500;
+        }
+    }
+}

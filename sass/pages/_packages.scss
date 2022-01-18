@@ -1,0 +1,9 @@
+.packages-archive {
+    padding: 12vw 0; 
+    @include xs {
+        padding: 10vw 0; 
+    }
+    @include md {
+        padding: 8vw 0; 
+    }
+}

@@ -89,6 +89,11 @@ ul {
         left: 50%;
         transform: translateX(-50%);
     }
+
+    &--right::after {
+        left: auto;
+        right: 0;
+    }
 }
 
 .heading-primary {

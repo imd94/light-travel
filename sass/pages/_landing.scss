@@ -73,6 +73,25 @@
             grid-column: col-start 5 / center-end;
             padding: 6vw 0 6vw 6vw;
         }
+
+        &--about {
+            text-align: right;
+            @include md {
+                grid-column: center-start / 6;
+                padding: 6vw 6vw 6vw 0;
+            }
+        }
+    }
+
+    &--about {
+        background-image: url(../../img/travel-landscape-17.jpg);
+        grid-template-rows: min-content min-content;
+
+        &::before {
+            @include md {
+                grid-column: full-start / 6;
+            }
+        }
     }
 }
 
