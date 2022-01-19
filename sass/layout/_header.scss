@@ -74,7 +74,8 @@
 
 .blog-header,
 .shop-header,
-.packages-header {
+.packages-header,
+.team-header {
     padding-top: 12vw; 
     @include xs {
         padding-top: 10vw; 

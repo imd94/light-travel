@@ -1,0 +1,24 @@
+
+.contact-feature {
+    background-color: $colorGreyLight1;
+    padding: 6rem 3rem;
+    text-align: center;
+
+    &__icon {
+        color: $colorFirst;
+        font-size: 3rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 8rem;
+        height: 8rem;
+        margin: 0 auto;
+        border: 2px solid $colorFirst;
+        border-radius: 100%;
+    }
+
+    &__link {
+        display: block;
+        color: $colorThird;
+    }
+}

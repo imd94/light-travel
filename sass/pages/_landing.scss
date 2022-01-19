@@ -18,6 +18,26 @@
             grid-template-columns: repeat(2, 1fr);
         }
     }
+
+    &--team {
+        position: relative;
+
+        &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 100%;
+            left: 0; right: 0;
+            height: 10rem;
+            width: 100%;
+            background-image: linear-gradient(180deg, $colorGreyLight1, $colorWhite);
+        }
+
+    }
+
+    &--contact {
+        background-color: transparent; 
+    }
 }
 
 .video-tour {
@@ -184,6 +204,10 @@
         @include sm {
             grid-template-columns: repeat(3, 1fr);
             grid-column-gap: 5%;
+        }
+
+        &--align-left {
+            text-align: left;
         }
     }
 

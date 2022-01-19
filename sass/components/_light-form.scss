@@ -1,5 +1,5 @@
 .light-form {
-    &__input {
+    &__input, &__msg-area {
         display: block;
         width: 100%;
         padding: 1.5rem;
@@ -23,6 +23,21 @@
         }
         &::-webkit-input-placeholder {
             color: rgba($colorGreyDark2, .5);
+        }
+
+        &--bordered {
+            border: 1px solid rgba($colorGreyDark1, .2);
+            border-radius: 0;
+
+            &:focus {
+                outline: none;
+                box-shadow: 0 1rem 2rem rgba($colorDark, 0.1);
+                border-bottom: 1px solid $colorFirst;
+            }
+          
+            &:focus:invalid {
+                border-bottom: 1px solid $colorSecond;
+            }
         }
     }
 
